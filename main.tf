@@ -37,7 +37,3 @@ resource "aws_instance" "main" {
   security_groups = [aws_security_group.main.name]
 }
 
-
-# output "vpc_id" {
-#   value = aws_vpc.main.id
-# }
