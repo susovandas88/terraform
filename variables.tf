@@ -31,5 +31,5 @@ variable "key_name" {
 variable "availability_zone" {
   description = "The AWS availability zone to deploy resources in"
   type        = string
-  default     = "ap-south-1a" // Change to your preferred AZ
+  default     = "us-east-1" // Change to your preferred AZ
 }
