@@ -24,21 +24,21 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        run: terraform init -var="s3_bucket_name=${{ secrets.AWS_S3_BUCKET_NAME }}" 
-             -var="s3_bucket_key=${{ secrets.AWS_S3_BUCKET_KEY }}" 
-             -var="availability_zone=${{ secrets.AWS_REGION }}" 
-             -var="subnet_cidr=${{ secrets.SUBNET_CIDR }}" 
-             -var="vpc_cidr=${{ secrets.VPC_CIDR }}" 
+        run: terraform -var="s3_bucket_name=${{ secrets.AWS_S3_BUCKET_NAME }}" \
+             -var="s3_bucket_key=${{ secrets.AWS_S3_BUCKET_KEY }}" \
+             -var="availability_zone=${{ secrets.AWS_REGION }}" \
+             -var="subnet_cidr=${{ secrets.SUBNET_CIDR }}" \
+             -var="vpc_cidr=${{ secrets.VPC_CIDR }}" init
 
       # - name: Terraform Validate
       #   run: terraform validate
 
       - name: Terraform Plan
-        run: terraform plan -var="s3_bucket_name=${{ secrets.AWS_S3_BUCKET_NAME }}" 
-             -var="s3_bucket_key=${{ secrets.AWS_S3_BUCKET_KEY }}" 
-             -var="availability_zone=${{ secrets.AWS_REGION }}" 
-             -var="subnet_cidr=${{ secrets.SUBNET_CIDR }}" 
-             -var="vpc_cidr=${{ secrets.VPC_CIDR }}" 
+        run: terraform  -var="s3_bucket_name=${{ secrets.AWS_S3_BUCKET_NAME }}" \
+             -var="s3_bucket_key=${{ secrets.AWS_S3_BUCKET_KEY }}" \
+             -var="availability_zone=${{ secrets.AWS_REGION }}" \
+             -var="subnet_cidr=${{ secrets.SUBNET_CIDR }}" \
+             -var="vpc_cidr=${{ secrets.VPC_CIDR }}" plan
       
       # - name: Terraform Apply
       #   run: terraform apply --auto-approve
