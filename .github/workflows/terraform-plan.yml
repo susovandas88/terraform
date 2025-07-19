@@ -28,7 +28,7 @@ jobs:
              -var="s3_bucket_key=${{ secrets.AWS_S3_BUCKET_KEY }}" \
              -var="availability_zone=${{ secrets.AWS_REGION }}" \
              -var="subnet_cidr=${{ secrets.SUBNET_CIDR }}" \
-             -var="vpc_cidr=${{ secrets.VPC_CIDR }}" \
+             -var="vpc_cidr=${{ secrets.VPC_CIDR }}" 
 
       # - name: Terraform Validate
       #   run: terraform validate
@@ -38,7 +38,7 @@ jobs:
              -var="s3_bucket_key=${{ secrets.AWS_S3_BUCKET_KEY }}" \
              -var="availability_zone=${{ secrets.AWS_REGION }}" \
              -var="subnet_cidr=${{ secrets.SUBNET_CIDR }}" \
-             -var="vpc_cidr=${{ secrets.VPC_CIDR }}" \
+             -var="vpc_cidr=${{ secrets.VPC_CIDR }}" 
       
       # - name: Terraform Apply
       #   run: terraform apply --auto-approve
