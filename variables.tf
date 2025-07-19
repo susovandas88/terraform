@@ -44,3 +44,19 @@ variable "s3_bucket_key" {
   sensitive = true
   
 }
+# variable "vault_address" {
+#   description = "Vault server address"
+#   type        = string
+# }
+
+# variable "vault_role_id" {
+#   description = "Vault AppRole Role ID"
+#   type        = string
+#   sensitive   = true
+# }
+
+# variable "vault_secret_id" {
+#   description = "Vault AppRole Secret ID"
+#   type        = string
+#   sensitive   = true
+# }
