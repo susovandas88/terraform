@@ -1,13 +1,13 @@
 variable "vpc_cidr" {
   description = "The CIDR block for the VPC"
   type        = string
-  default     = "10.0.0.0/16"
+  sensitive = true
 }
 
 variable "subnet_cidr" {
   description = "The CIDR block for the subnet"
   type        = string
-  default     = "10.0.1.0/24"
+  sensitive = true
 }
 
 variable "instance_type" {
@@ -31,5 +31,16 @@ variable "key_name" {
 variable "availability_zone" {
   description = "The AWS availability zone to deploy resources in"
   type        = string
-  default     = "us-east-1" // Change to your preferred AZ
+  sensitive = true
+}
+variable "s3_bucket_name" {
+  description = "The name of the S3 bucket for Terraform state"
+  type        = string
+  sensitive = true
+}
+variable "s3_bucket_key" {
+  description = "The key for the S3 bucket where Terraform state is stored"
+  type        = string
+  sensitive = true
+  
 }
