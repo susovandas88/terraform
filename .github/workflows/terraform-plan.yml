@@ -24,7 +24,7 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        run: terraform init -backend-config="bucket=${{ secrets.AWS_S3_BUCKET_NAME }}" -backend-config="key=${{ secrets.AWS_S3_BUCKET_KEY }}" -backend-config="region=${{ secrets.AWS_REGION }}" -var="subnet_cidr=${{ secrets.SUBNET_CIDR }}" -var="vpc_cidr=${{ secrets.VPC_CIDR }}" 
+        run: terraform init -backend-config="bucket=${{ secrets.AWS_S3_BUCKET_NAME }}" -backend-config="key=${{ secrets.AWS_S3_BUCKET_KEY }}" -backend-config="region=${{ secrets.AWS_REGION }}" -var="subnet_cidr=${{ secrets.SUBNET_CIDR }}" -var="vpc_cidr=${{ secrets.VPC_CIDR }}"
 
       # - name: Terraform Validate
       #   run: terraform validate
