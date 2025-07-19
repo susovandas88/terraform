@@ -30,7 +30,7 @@ jobs:
       #   run: terraform validate
 
       - name: Terraform Plan
-        run: terraform plan -var="subnet_cidr=${{ secrets.SUBNET_CIDR }}" -var="vpc_cidr=${{ secrets.VPC_CIDR }}" #-backend-config="bucket=${{ secrets.AWS_S3_BUCKET_NAME }}" -backend-config="key=${{ secrets.AWS_S3_BUCKET_KEY }}" -backend-config="region=${{ secrets.AWS_REGION }}" -var="subnet_cidr=${{ secrets.SUBNET_CIDR }}" -var="vpc_cidr=${{ secrets.VPC_CIDR }}" 
+        run: terraform plan -var="subnet_cidr=${{ vars.SUBNET_CIDR }}" -var="vpc_cidr=${{ vars.VPC_CIDR }}" -backend-config="bucket=${{ vars.AWS_S3_BUCKET_NAME }}" -backend-config="key=${{ vars.AWS_S3_BUCKET_KEY }}" -backend-config="region=${{ vars.AWS_REGION }}" #-var="subnet_cidr=${{ secrets.SUBNET_CIDR }}" -var="vpc_cidr=${{ secrets.VPC_CIDR }}" 
       # - name: Terraform Apply
       #   run: terraform apply --auto-approve
 
