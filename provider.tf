@@ -1,5 +1,5 @@
 provider "aws" {
-  region = var.availability_zone #"us-east-1"
+  region = "us-east-1"
 }
 
 terraform {
